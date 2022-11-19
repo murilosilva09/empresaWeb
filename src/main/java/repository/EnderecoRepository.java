@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import Entidades.Endereco;
 
 @Repository
-public interface enderecoRepository extends CrudRepository <Endereco, Integer>{
+public interface EnderecoRepository extends CrudRepository <Endereco, Integer>{
 
 } 

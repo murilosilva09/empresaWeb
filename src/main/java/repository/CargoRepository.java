@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import Entidades.Cargo;
 
 @Repository
-public interface cargoRepository extends CrudRepository <Cargo, Integer>{
+public interface CargoRepository extends CrudRepository <Cargo, Integer>{
 
 }

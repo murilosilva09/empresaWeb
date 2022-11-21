@@ -1,4 +1,4 @@
-package Entidades;
+package br.com.empresaWeb.empresaWeb.entidades;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,9 +7,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "funcionario")
-public class Funcionario {
-
+@Table(name = "pessoa")
+public class Pessoa {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -17,7 +17,6 @@ public class Funcionario {
 	private String sobrenome;
 	private String cpf;
 	private String rg;
-	
 	public String getNome() {
 		return nome;
 	}
@@ -45,7 +44,5 @@ public class Funcionario {
 	public Integer getId() {
 		return id;
 	}
-	
-	
 	
 }

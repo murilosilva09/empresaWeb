@@ -1,4 +1,4 @@
-package service;
+package br.com.empresaWeb.empresaWeb.service;
 
 import org.springframework.stereotype.Service;
 

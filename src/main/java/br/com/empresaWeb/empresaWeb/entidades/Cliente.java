@@ -1,4 +1,4 @@
-package Entidades;
+package br.com.empresaWeb.empresaWeb.entidades;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,9 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "pessoa")
-public class Pessoa {
-	
+@Table(name = "cliente")
+public class Cliente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -17,6 +16,7 @@ public class Pessoa {
 	private String sobrenome;
 	private String cpf;
 	private String rg;
+	
 	public String getNome() {
 		return nome;
 	}
@@ -44,5 +44,4 @@ public class Pessoa {
 	public Integer getId() {
 		return id;
 	}
-	
 }

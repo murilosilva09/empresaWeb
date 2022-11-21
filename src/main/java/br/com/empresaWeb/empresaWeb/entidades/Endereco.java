@@ -61,6 +61,10 @@ public class Endereco {
 	}
 	public void setUf(String uf) {
 		this.uf = uf;
+	}
+	public void setDescricao(String descricao) {
+		// TODO Auto-generated method stub
+		
 	}  
 	
 }

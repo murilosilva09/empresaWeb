@@ -13,7 +13,7 @@ import br.com.empresaWeb.empresaWeb.service.CrudCargoService;
 @SpringBootApplication
 public class SpringDataApplication implements CommandLineRunner {
 
-	private final CrudCargoService cargoService;
+	private    CrudCargoService cargoService;
 
 	private boolean system = true;
 

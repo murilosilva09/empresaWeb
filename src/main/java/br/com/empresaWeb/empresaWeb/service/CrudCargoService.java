@@ -2,9 +2,9 @@ package br.com.empresaWeb.empresaWeb.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.empresaWeb.empresaWeb.entidades.Cargo;
@@ -27,7 +27,10 @@ public class CrudCargoService {
 		while (system) {
 			System.out.println("Qual acao de cargo deseja executar: ");
 			System.out.println("0 - Sair");
-			System.out.println("1 - Salvar");
+			System.out.println("1 - Salvar cargo novo");
+			System.out.println("2 - Visualizar cargos registrados");
+			System.out.println("3 - Atualizar cargo existente atraves do ID");
+			System.out.println("4 - Deletar cargo existente atraves do ID");
 
 			int action = scanner.nextInt();
 
@@ -35,6 +38,15 @@ public class CrudCargoService {
 
 			case 1:
 				salvar(scanner);
+				break;
+			case 2:
+				visualizar();
+				break;
+			case 3:
+				atualizar(scanner);
+				break;
+			case 4:
+				deletar(scanner);
 				break;
 			default:
 				system = false;
@@ -69,4 +81,35 @@ public class CrudCargoService {
 	public void setTrue(boolean isTrue) {
 		this.isTrue = isTrue;
 	}
+	
+	private void visualizar() {
+		Iterable<Cargo> cargos = cargoRepository.findAll();
+		cargos.forEach(cargo -> System.out.println(cargo));
+	}
+	
+	public void atualizar(Scanner scanner) {
+		System.out.println("Digite o cargoId");
+	    Integer cargoId = scanner.nextInt();
+	    
+	    System.out.println("Digite o novo cargo: ");
+	    String cargonov = scanner.next();
+	    
+	    Cargo cargonovo = new Cargo();
+	    
+	    cargonovo.setId(cargoId);
+	    cargonovo.setDescricao(cargonov);
+	    
+	    Optional<Cargo> cargo = cargoRepository.findById(cargoId);
+	    
+	    cargoRepository.save(cargonovo);
+	    System.out.println("Alterado");
+	}
+	
+	private void deletar(Scanner scanner) {
+		System.out.println("Digite o Id para deletar: ");
+		int id = scanner.nextInt();
+		cargoRepository.deleteById(id);
+		System.out.println("Deletado");
+	}
+	
 }

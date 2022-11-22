@@ -7,22 +7,21 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import br.com.empresaWeb.empresaWeb.service.CrudCargoService;
+import br.com.empresaWeb.empresaWeb.service.CrudEnderecoService;
 
 
 @SpringBootApplication
 public class SpringDataApplication implements CommandLineRunner {
 
-<<<<<<< HEAD
 	private final CrudCargoService cargoService;
-	
-=======
-	private    CrudCargoService cargoService;
+	private final CrudEnderecoService enderecoService;
 
->>>>>>> refs/remotes/origin/desenvolvimento
+
 	private boolean system = true;
 
-	public SpringDataApplication(CrudCargoService cargoService) {
+	public SpringDataApplication(CrudCargoService cargoService, CrudEnderecoService enderecoService) {
 		this.cargoService = cargoService;
+		this.enderecoService = enderecoService;
 	}
 
 	public static void main(String[] args) {

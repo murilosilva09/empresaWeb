@@ -44,7 +44,6 @@ public class CrudEnderecoService {
 	}
 
 	private void salvar(Scanner scanner) {
-		// TODO Auto-generated method stub
 
 		System.out.println("Digite o logradouro: ");
 		String logradouro = scanner.next();
@@ -65,6 +64,11 @@ public class CrudEnderecoService {
 		Endereco endereco = new Endereco();
 
 		endereco.setLogradouro(logradouro);
+		endereco.setNumero(numero);
+		endereco.setBairro(bairro);
+		endereco.setCidade(cidade);
+		endereco.setEstado(estado);
+		
 		enderecoRepository.save(endereco);
 		System.out.println("Salvo!");
 	}

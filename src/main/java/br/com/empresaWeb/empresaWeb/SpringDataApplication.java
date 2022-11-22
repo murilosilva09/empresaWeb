@@ -45,7 +45,7 @@ public class SpringDataApplication implements CommandLineRunner {
 				cargoService.inicial(scanner);
 			}
 			if (action == 2) {
-				
+				enderecoService.inicial(scanner);
 			}
 			else {
 				system = false;

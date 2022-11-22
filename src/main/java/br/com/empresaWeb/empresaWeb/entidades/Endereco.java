@@ -10,6 +10,7 @@ import javax.persistence.Table;
 @Table ( name = "endereco")
 public class Endereco {
 
+	
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -18,7 +19,7 @@ public class Endereco {
 	private String bairro;
 	private String cidade;
 	private String estado;
-
+	//private String uf;
 	
 	public Integer getId() {
 		return id;
@@ -61,5 +62,11 @@ public class Endereco {
 		// TODO Auto-generated method stub
 		
 	}  
+	
+	@Override
+	public String toString() {
+		return "Endereco [id=" + id + ", logradouro=" + logradouro + ", numero=" + numero + ", bairro=" + bairro
+				+ ", cidade=" + cidade + ", estado=" + estado + "]";
+	}
 	
 }

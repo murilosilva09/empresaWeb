@@ -17,7 +17,6 @@ public class CrudEnderecoService {
 	private boolean isTrue;
 	private Boolean system = true;
 	private EnderecoRepository enderecoRepository;
-	private Iterable<Endereco> endereco;
 
 	public CrudEnderecoService(EnderecoRepository enderecoRepository) {
 		this.enderecoRepository = enderecoRepository;

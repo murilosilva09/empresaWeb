@@ -15,6 +15,7 @@ public class Empresa {
 	private String nome;
 	private String ramo;
 	private String cnpf;
+	
 	public String getNome() {
 		return nome;
 	}

@@ -47,7 +47,6 @@ public class CrudCargoService {
 				break;
 			case 4:
 				deletar(scanner);
-				break;
 			default:
 				system = false;
 				break;

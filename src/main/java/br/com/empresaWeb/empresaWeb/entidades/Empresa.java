@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -15,6 +16,9 @@ public class Empresa {
 	private String nome;
 	private String ramo;
 	private String cnpf;
+	
+	@OneToMany
+	
 	
 	public String getNome() {
 		return nome;
